@@ -1,164 +1,425 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreatLinks</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>GreatLinks</h1>
-            <nav id="nav">
-                <ul id="navList">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#random">Random</a></li>
-                </ul>
-                <div class="nav-buttons">
-                    <button class="btn btn-signin">Sign In</button>
-                    <button class="btn btn-register">Register</button>
-                </div>
-            </nav>
-            <div class="menu-toggle" id="menu-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </header>
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4f5;
+}
 
-    <div class="main-content">
-        <main id="page1">
-            <!-- Page 1 Content -->
-            <section id="top-5">
-                <h2>Top 5 Most Visited Websites</h2>
-                <ol>
-                    <li><a href="#google-search">Google Search</a></li>
-                    <li><a href="#youtube">YouTube</a></li>
-                    <li><a href="#facebook">Facebook</a></li>
-                    <li><a href="#instagram">Instagram</a></li>
-                    <li><a href="#tiktok">TikTok</a></li>
-                </ol>
-            </section>
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #ff6b6b, #f06595); /* Gradient background */
+    color: #fff;
+    padding: 5px;
+    position: relative;
+}
 
-            <section id="google-search">
-                <h2>Google Search</h2>
-                <p>Google Search is the world's most popular search engine, serving billions of users daily. Its dominance stems from its ability to provide highly relevant search results quickly and efficiently.</p>
-            </section>
+.container {
+    width: 100%;
+    margin: 5px 10px;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-            <section id="youtube">
-                <h2>YouTube</h2>
-                <p>YouTube is a video-sharing platform that has become a cultural phenomenon, attracting billions of users worldwide. Its popularity is driven by its diverse content, ranging from music videos and tutorials to vlogs and documentaries.</p>
-            </section>
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    text-align: left;
+    flex: 1;
+    padding: 0px 10px; /* Added padding */
+}
 
-            <section id="facebook">
-                <h2>Facebook</h2>
-                <p>Facebook is a social networking platform that has revolutionized the way people connect and interact online. Its popularity is fueled by its ability to facilitate communication with friends and family, share updates and experiences, and join communities of interest.</p>
-            </section>
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    right: 20px;
+    top: 0px;
+    padding: 10px; /* Added padding */
+}
 
-            <section id="instagram">
-                <h2>Instagram</h2>
-                <p>Instagram is a photo and video sharing platform that has gained immense popularity, particularly among younger generations. Its focus on visual content, combined with its user-friendly interface and powerful editing tools, has made it a go-to platform for self-expression and creativity.</p>
-            </section>
+.menu-toggle .bar {
+    background-color: #ffffff;
+    height: 3px;
+    width: 30px;
+    margin: 3px 3px;
+    transition: 0.3s;
+}
 
-            <section id="tiktok">
-                <h2>TikTok</h2>
-                <p>TikTok is a popular social media platform known for its short-form video content. Users can create and share videos up to 60 seconds long, often accompanied by music, sound effects, and various visual effects.</p>
-            </section>
+/* Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
 
-            <!-- Pagination for Page 1 -->
-            <div class="pagination">
-                <a href="#" class="active" data-page="1">1</a>
-                <a href="#" data-page="2">2</a>
-            </div>
-        </main>
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px 60px;
+    display: flex;
+    gap: 40px;
+    flex: 1;
+}
 
-        <main id="page2" class="hidden">
-            <!-- Page 2 Content -->
-            <section id="whatsapp">
-                <h2>WhatsApp</h2>
-                <p>WhatsApp is a widely used messaging application that allows users to send text messages, voice messages, and multimedia files. It offers end-to-end encryption and is popular for both personal and business communication.</p>
-            </section>
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
 
-            <section id="wikipedia">
-                <h2>Wikipedia</h2>
-                <p>Wikipedia is a free, web-based, collaborative, multilingual encyclopedia project supported by the non-profit Wikimedia Foundation. It is one of the largest and most popular general reference works on the internet.</p>
-            </section>
+nav a:hover {
+    text-decoration: underline;
+}
 
-            <section id="reddit">
-                <h2>Reddit</h2>
-                <p>Reddit is a social news aggregation, web content rating, and discussion website. Registered members can submit content, such as text, links, and images, which is then voted up or down by other members.</p>
-            </section>
+/* Navigation Buttons Styles */
+.nav-buttons {
+    display: inline-flex;
+    gap: 10px;
+    margin-right: 5px;
+    align-content: end;
+}
 
-            <section id="amazon">
-                <h2>Amazon</h2>
-                <p>Amazon is a global e-commerce and cloud computing giant. It started as an online bookstore and has since expanded into various product categories, including electronics, clothing, and digital services.</p>
-            </section>
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
 
-            <!-- Pagination for Page 2 -->
-            <div class="pagination">
-                <a href="#" data-page="1">1</a>
-                <a href="#" class="active" data-page="2">2</a>
-            </div>
-        </main>
+.btn-signin {
+    background-color: #fff;
+    color: #ff6b6b;
+}
 
-        <aside class="sidebar">
-            <h2>Quick Links</h2>
-            <ul>
-                <li><a href="https://google.com" target="_blank">Google Search</a></li>
-                <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
-                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-                <li><a href="https://tiktok.com" target="_blank">TikTok</a></li>
-                <li><a href="https://whatsapp.com" target="_blank">WhatsApp</a></li>
-                <li><a href="https://#wikipedia.org" target="_blank">Wikipedia</a></li>
-                <li><a href="https://reddit.com" target="_blank">Reddit</a></li>
-                <li><a href="https://amazon.com" target="_blank">Amazon</a></li>
-            </ul>
-        </aside>
-    </div>
+.btn-register {
+    background-color: #ff6b6b;
+    color: #fff;
+}
 
-    <footer>
-        <p>&copy; 2024 GreatLinks</p>
-    </footer>
+.btn-signin:hover {
+    background-color: #f0f0f0;
+}
 
-    <script src="scripts.js"></script> <!-- Link to JavaScript file -->
-    <!-- Sign In Modal (Hidden by default) -->
-<div id="signin-modal" class="modal hidden">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Sign In</h2>
-        <form id="signin-form">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit" class="btn btn-submit">Sign In</button>
-        </form>
-    </div>
-</div>
+.btn-register:hover {
+    background-color: #e05d5d;
+}
 
-<!-- Register Modal (Hidden by default) -->
-<div id="register-modal" class="modal hidden">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Register</h2>
-        <form id="register-form">
-            <label for="reg-email">Email:</label>
-            <input type="email" id="reg-email" name="email" required>
-            
-            <label for="reg-password">Password:</label>
-            <input type="password" id="reg-password" name="password" required>
-            <div id="password-strength" class="password-strength">Strength: </div>
-            
-            <label for="reg-confirm-password">Confirm Password:</label>
-            <input type="password" id="reg-confirm-password" name="confirm-password" required>
-            
-            <button type="submit" class="btn btn-submit">Register</button>
-        </form>
-    </div>
-</div>
+/* Main Content and Sidebar Styles */
+.main-content {
+    display: flex;
+    margin: 20px auto;
+    width: 100%;  /* Make it 100% to fill the viewport width */
+    max-width: 1200px;  /* This will maintain a consistent width */
+    transition: all 0.3s ease-in-out; /* Smooth transitions when changing content */
+}
 
-</body>
-</html>
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Styling for the Ordered List */
+#top-5 ol {
+    list-style: none; /* Remove default numbering */
+    padding: 0;
+    margin: 20px 0;
+}
+
+/* Styling for the List Items */
+#top-5 ol li {
+    padding: 15px 20px;
+    margin: 10px 0;
+    background-color: #fff;
+    border: 1px solid #ff6b6b;
+    border-radius: 8px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#top-5 ol li a {
+    text-decoration: none;
+    color: #ff6b6b;
+    font-weight: bold;
+    display: block;
+}
+
+#top-5 ol li:hover {
+    background-color: #ff6b6b;
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+#top-5 ol li:hover a {
+    color: #fff; /* Change text color on hover */
+}
+
+
+aside.sidebar {
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+aside.sidebar h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+aside.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside.sidebar li {
+    margin: 10px 0;
+}
+
+aside.sidebar a {
+    text-decoration: none;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+aside.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Pagination Styles */
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #ff6b6b;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 1px solid #ff6b6b;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+.pagination a.active {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: 1px solid #ff6b6b;
+}
+
+/* Page Visibility Styles */
+.hidden {
+    display: none;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    aside.sidebar {
+        display: none;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #ff6b6b;
+}
+
+.modal-content label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content .btn-submit {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.modal-content .btn-submit:hover {
+    background-color: #e05d5d;
+}
+
+/* Close Button */
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Modal Styles (shared for both Sign In and Register) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #ff6b6b;
+}
+
+.modal-content label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content .btn-submit {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.modal-content .btn-submit:hover {
+    background-color: #e05d5d;
+}
+
+/* Close Button */
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Password Strength Feedback Styles */
+.password-strength {
+    margin-top: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.password-strength.weak {
+    color: #ff6b6b;
+}
+
+.password-strength.medium {
+    color: #f0ad4e;
+}
+
+.password-strength.strong {
+    color: #5bc0de;
+}
