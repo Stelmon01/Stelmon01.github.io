@@ -1,0 +1,226 @@
+/* Basic reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .navBar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0rem 0;
+    display:flex;
+    justify-content: space-between;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+  }
+  
+  .category {
+    padding: 1rem;
+    background-color: #f4f4f4;
+    margin-bottom: 2rem;
+  }
+  
+  .category h2 {
+    color: #333;
+  }
+  
+  .category ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .category ul li {
+    background: white;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    display:block;
+    justify-content:center;
+  }
+  
+  .category ul li a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .category ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .rank {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Search bar styling */
+.search-bar {
+    text-align: center;
+    margin: 10px 0px;
+  }
+  
+  .search-bar input {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  /* Search and Random button container */
+.search-and-random {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 0;
+  }
+  
+  .randAndHome {
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+  /* Search bar styling */
+  .search-bar {
+    margin-right: 1rem; /* Space between search bar and random button */
+  }
+  
+  /* Random button styling */
+  .random-button {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .random-button:hover {
+    background-color: #45a049;
+  }
+
+  /* Random links list */
+.random-links-list {
+    margin-top: 1rem;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .random-links-list li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .random-links-list a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  .random-links-list a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Random sites section */
+  .random-sites {
+    padding: 1rem;
+    background-color: #f4f4f4;
+    margin-bottom: 1rem;
+  }
+  
+  .random-sites h2 {
+    color: #333;
+  }
+  
+  .random-sites ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .random-sites ul li {
+    background: white;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    display: block;
+    justify-content:center;
+  }
+  
+  .random-sites ul li a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .random-sites ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Home button styling */
+.home-button {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 1rem; /* Space from other buttons */
+  }
+  
+  .home-button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Pagination button styles */
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #000000;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
